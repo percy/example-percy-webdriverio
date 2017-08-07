@@ -1,0 +1,25 @@
+{
+  "name": "example-webdriverio",
+  "version": "1.0.0",
+  "description": "Example of percy.io using webdriver",
+  "devDependencies": {
+    "percy-webdriverio": "github:percy/percy-webdriverio",
+    "wdio-mocha-framework": "^0.5.10",
+    "wdio-selenium-standalone-service": "^0.0.9",
+    "wdio-static-server-service": "^1.0.0",
+    "webdriverio": "^4.8.0"
+  },
+  "scripts": {
+    "test": "wdio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/percy/example-webdriverio.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/percy/example-webdriverio/issues"
+  },
+  "homepage": "https://github.com/percy/example-webdriverio#readme"
+}
