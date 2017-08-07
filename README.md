@@ -1,5 +1,5 @@
 # example-webdriverio
-Example of how to integrate Percy visual test with WebdriverIO.
+Example of how to integrate Percy visual tests with WebdriverIO.
 
 ## Running the example
 
