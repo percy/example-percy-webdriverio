@@ -85,7 +85,7 @@ exports.config = {
     connectionRetryCount: 3,
 
     plugins: {
-      'percy-webdriverio': {}
+      '@percy-io/percy-webdriverio': {}
     },
     //
     // Initialize the browser instance with a WebdriverIO plugin. The object should have the
@@ -163,8 +163,9 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+      browser.percyUseAssetLoader('filesystem', {buildDir: 'site/assets', mountPath:'/assets' });
+    },
     //
     /**
      * Hook that gets executed before the suite starts
@@ -225,8 +226,9 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that ran
      */
-    // after: function (result, capabilities, specs) {
-    // },
+    after: function (result, capabilities, specs) {
+      browser.percyFinalizeBuild();
+    },
     /**
      * Gets executed right after terminating the webdriver session.
      * @param {Object} config wdio configuration object

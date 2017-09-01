@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Example of percy.io using webdriver",
   "devDependencies": {
-    "percy-webdriverio": "github:percy/percy-webdriverio",
+    "@percy-io/percy-webdriverio": "github:percy/percy-webdriverio",
     "wdio-mocha-framework": "^0.5.10",
     "wdio-selenium-standalone-service": "^0.0.9",
     "wdio-static-server-service": "^1.0.0",
