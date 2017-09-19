@@ -1,3 +1,5 @@
+var percy = require('@percy-io/percy-webdriverio');
+
 exports.config = {
 
     //
@@ -146,8 +148,10 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare: function (config, capabilities) {
+      var assetLoaders = [percy.assetLoader('filesystem', { buildDir: 'site/assets', mountPath: '/assets' })];
+      return percy.createBuild(assetLoaders);
+    },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.
@@ -163,9 +167,9 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    before: function (capabilities, specs) {
-      browser.percyUseAssetLoader('filesystem', {buildDir: 'site/assets', mountPath:'/assets' });
-    },
+    //before: function (capabilities, specs) {
+    //  browser.percyUseAssetLoader('filesystem', {buildDir: 'site/assets', mountPath:'/assets' });
+    //},
     //
     /**
      * Hook that gets executed before the suite starts
@@ -226,9 +230,8 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that ran
      */
-    after: function (result, capabilities, specs) {
-      browser.percyFinalizeBuild();
-    },
+    // after: function (result, capabilities, specs) {
+    // },
     /**
      * Gets executed right after terminating the webdriver session.
      * @param {Object} config wdio configuration object
@@ -242,6 +245,7 @@ exports.config = {
      * possible to defer the end of the process using a promise.
      * @param {Object} exitCode 0 - success, 1 - fail
      */
-    // onComplete: function(exitCode) {
-    // }
+    onComplete: function(exitCode) {
+      return percy.finalizeBuild();
+    }
 }
