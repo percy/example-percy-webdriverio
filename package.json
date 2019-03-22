@@ -12,7 +12,8 @@
     "http-server": "^0.11.1"
   },
   "scripts": {
-    "test": "percy exec -- wdio"
+    "test": "percy exec -- wdio",
+    "test-win": "percy exec -- wdio.cmd"
   },
   "repository": {
     "type": "git",
