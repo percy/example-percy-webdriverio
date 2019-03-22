@@ -23,6 +23,5 @@
   "bugs": {
     "url": "https://github.com/percy/example-webdriverio/issues"
   },
-  "homepage": "https://github.com/percy/example-webdriverio#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/percy/example-webdriverio#readme"
 }
