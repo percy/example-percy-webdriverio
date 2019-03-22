@@ -14,7 +14,7 @@ jobs:
       PERCY_ENABLE: 0
     <<: *default_steps
   node_10_with_percy:
-    # We've opted this node version to be the one that runs and reports Percy's status
+    # We've opted this node version to be the one that runs and reports Percy's status.
     docker:
       - image: circleci/node:10-browsers
     <<: *default_steps
