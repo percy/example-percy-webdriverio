@@ -1,5 +1,3 @@
-var percy = require('@percy-io/percy-webdriverio');
-
 exports.config = {
 
     //
@@ -59,8 +57,8 @@ exports.config = {
     // e.g. using promises you can set the sync option to false.
     sync: true,
     //
-    // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'verbose',
+    // Level of logging verbosity: trace | debug | info | warn | error | silent
+    logLevel: 'warn',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -87,7 +85,6 @@ exports.config = {
     connectionRetryCount: 3,
 
     plugins: {
-      '@percy-io/percy-webdriverio': {}
     },
     //
     // Initialize the browser instance with a WebdriverIO plugin. The object should have the
@@ -112,7 +109,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['static-server', 'selenium-standalone'], //
+    services: ['selenium-standalone'], //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: http://webdriver.io/guide/testrunner/frameworks.html
@@ -125,6 +122,7 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
     // reporters: ['dot'],
+    reporters: ['spec'],
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -132,9 +130,6 @@ exports.config = {
         ui: 'bdd'
     },
 
-    staticServerFolders: [
-      { mount: '/', path: 'site' }
-    ],
     //
     // =====
     // Hooks
@@ -149,8 +144,6 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      */
     onPrepare: function (config, capabilities) {
-      var assetLoaders = [percy.assetLoader('filesystem', { buildDir: 'site/assets', mountPath: '/assets' })];
-      return percy.createBuild(assetLoaders);
     },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
@@ -168,7 +161,6 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
     //before: function (capabilities, specs) {
-    //  browser.percyUseAssetLoader('filesystem', {buildDir: 'site/assets', mountPath:'/assets' });
     //},
     //
     /**
@@ -246,6 +238,5 @@ exports.config = {
      * @param {Object} exitCode 0 - success, 1 - fail
      */
     onComplete: function(exitCode) {
-      return percy.finalizeBuild();
     }
 }
