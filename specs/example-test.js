@@ -1,6 +1,6 @@
 const assert = require('assert')
 const httpServer = require('http-server')
-const { percySnapshot } = require('@percy/percy-webdriverio')
+const { percySnapshot } = require("@percy/webdriverio");
 
 describe('example page', function() {
   const PORT = 8000
