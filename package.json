@@ -9,7 +9,7 @@
     "@wdio/mocha-framework": "^5.15.1",
     "@wdio/selenium-standalone-service": "^5.16.10",
     "@wdio/spec-reporter": "^5.16.5",
-    "http-server": "^0.11.1"
+    "http-server": "^0.12.0"
   },
   "scripts": {
     "test": "percy exec -- wdio"
