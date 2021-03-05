@@ -30,7 +30,7 @@ describe('example page', function () {
   it('Loads the app', async function () {
     await browser.url(TEST_URL);
 
-    assert.equal(await browser.getTitle(), 'VanillaJS • TodoMVC');
+    expect(await browser.getTitle()).toEqual('VanillaJS • TodoMVC');
     await percySnapshot(browser, 'loads the app');
   });
 
