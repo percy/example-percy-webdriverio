@@ -1,4 +1,3 @@
-const assert = require('assert');
 const httpServer = require('http-server');
 const percySnapshot = require('@percy/webdriverio');
 
