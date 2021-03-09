@@ -6,12 +6,12 @@ Based on the [TodoMVC](https://github.com/tastejs/todomvc) [VanillaJS](https://g
 app, forked at commit
 [4e301c7014093505dcf6678c8f97a5e8dee2d250](https://github.com/tastejs/todomvc/tree/4e301c7014093505dcf6678c8f97a5e8dee2d250).
 
-## WerbDriverIO Tutorial
+## WebDriverIO Tutorial
 
 The tutorial assumes you're already familiar with JavaScript and
 [WebDriverIO](https://webdriver.io) and focuses on using it with Percy. You'll still
-be able to follow along if you're not familiar with WerbDriverIO, but we won't
-spend time introducing WerbDriverIO concepts.
+be able to follow along if you're not familiar with WebDriverIO, but we won't
+spend time introducing WebDriverIO concepts.
 
 The tutorial also assumes you have [Node 12+ with
 npm](https://nodejs.org/en/download/) and
