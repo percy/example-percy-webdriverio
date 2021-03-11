@@ -2,7 +2,7 @@ const { findChromeDriverVersionSync } = require('find-chrome-driver-version');
 const seleniumOptions = {
   drivers: {
     chrome: {
-      version:'89.0.4389.23',
+      version: findChromeDriverVersionSync(),
       baseURL: 'https://chromedriver.storage.googleapis.com'
     },
     firefox: {
