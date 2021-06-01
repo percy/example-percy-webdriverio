@@ -12,7 +12,7 @@
     "geckodriver": "^1.22.3",
     "http-server": "^0.12.3",
     "todomvc-app-css": "^2.4.1",
-    "webdriverio": "^7.0.9"
+    "webdriverio": "^7.6.1"
   },
   "scripts": {
     "test": "percy exec -- wdio"
