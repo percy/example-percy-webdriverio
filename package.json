@@ -5,11 +5,11 @@
   "devDependencies": {
     "@percy/cli": "^1.0.0-beta.48",
     "@percy/webdriverio": "^2.0.0",
-    "@wdio/cli": "^7.5.3",
+    "@wdio/cli": "^7.7.1",
     "@wdio/local-runner": "^7.5.5",
     "@wdio/mocha-framework": "^7.5.3",
     "@wdio/spec-reporter": "^7.5.3",
-    "geckodriver": "^1.22.3",
+    "geckodriver": "^2.0.0",
     "http-server": "^0.12.3",
     "todomvc-app-css": "^2.4.1",
     "webdriverio": "^7.0.9"
