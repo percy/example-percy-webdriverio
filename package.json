@@ -26,6 +26,9 @@
   },
   "homepage": "https://github.com/percy/example-webdriverio#readme",
   "dependencies": {
-    "find-chrome-driver-version": "^0.3.1"
+    "@wdio/dot-reporter": "^7.6.0",
+    "chai": "^4.3.4",
+    "find-chrome-driver-version": "^0.4.0",
+    "jest": "^27.0.1"
   }
 }
