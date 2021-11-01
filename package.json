@@ -8,7 +8,7 @@
     "@wdio/cli": "^7.14.0",
     "@wdio/local-runner": "^7.7.4",
     "@wdio/mocha-framework": "^7.13.2",
-    "@wdio/spec-reporter": "^7.13.2",
+    "@wdio/spec-reporter": "^7.16.3",
     "geckodriver": "^2.0.4",
     "http-server": "^13.0.2",
     "todomvc-app-css": "^2.4.1",
