@@ -10,7 +10,7 @@
     "@wdio/mocha-framework": "^7.16.11",
     "@wdio/spec-reporter": "^7.16.11",
     "geckodriver": "^3.0.1",
-    "http-server": "^14.0.0",
+    "http-server": "^14.1.0",
     "todomvc-app-css": "^2.4.1",
     "webdriverio": "^7.16.12"
   },
