@@ -6,7 +6,7 @@
     "@percy/cli": "^1.0.5",
     "@percy/webdriverio": "^2.0.1",
     "@wdio/cli": "^7.19.6",
-    "@wdio/local-runner": "^7.19.3",
+    "@wdio/local-runner": "^7.19.5",
     "@wdio/mocha-framework": "^7.19.5",
     "@wdio/spec-reporter": "^7.19.5",
     "geckodriver": "^3.0.1",
