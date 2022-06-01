@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Example of percy.io using webdriver",
   "devDependencies": {
-    "@percy/cli": "^1.0.5",
-    "@percy/webdriverio": "^2.0.1",
+    "@percy/cli": "^1.2.1",
+    "@percy/webdriverio": "^2.0.2",
     "@wdio/cli": "^7.19.7",
     "@wdio/local-runner": "^7.19.7",
     "@wdio/mocha-framework": "^7.19.7",
