@@ -5,7 +5,7 @@
   "devDependencies": {
     "@percy/cli": "^1.10.0",
     "@percy/webdriverio": "^2.0.2",
-    "@wdio/cli": "^7.20.9",
+    "@wdio/cli": "^7.24.0",
     "@wdio/spec-reporter": "^7.23.0",
     "@wdio/mocha-framework": "^7.20.3",
     "@wdio/local-runner": "^7.23.0",
