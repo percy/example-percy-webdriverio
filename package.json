@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Example of percy.io using webdriver",
   "devDependencies": {
-    "@percy/cli": "^1.10.4",
+    "@percy/cli": "^1.12.0",
     "@percy/webdriverio": "^2.0.2",
     "@wdio/cli": "^7.25.1",
     "@wdio/spec-reporter": "^7.25.4",
