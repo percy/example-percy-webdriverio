@@ -1,16 +1,16 @@
+const { browser, $ } = require('@wdio/globals')
 const httpServer = require('http-server');
-const percySnapshot = require('@percy/webdriverio');
+import percySnapshot from '@percy/webdriverio'
 
 async function createTodo() {
-  let newTodo = await $('.new-todo');
-  newTodo.setValue('New fancy todo');
-  await browser.keys('Enter');
-  // needed or the todo is never submitted
-  await browser.execute(() => document.querySelector('.new-todo').blur());
+  let newTodo = $('.new-todo');
+  newTodo.setValue('New fancy todo\n');
+  // wait for js to run
+  await new Promise((res) => setTimeout(res, 500))
 }
 
 describe('example page', function () {
-  const PORT = 8000;
+  const PORT = 8001;
   const TEST_URL = `http://localhost:${PORT}`;
 
   let server = null;
@@ -35,6 +35,7 @@ describe('example page', function () {
 
   it('Accepts a new todo', async function () {
     await createTodo();
+
 
     let todoCount = await browser.execute(() => document.querySelectorAll('.todo-list li').length);
     expect(todoCount).toEqual(1);
