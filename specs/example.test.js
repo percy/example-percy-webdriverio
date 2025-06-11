@@ -1,6 +1,11 @@
-const { browser, $ } = require('@wdio/globals')
-const httpServer = require('http-server');
-import percySnapshot from '@percy/webdriverio'
+import { browser, $ } from '@wdio/globals';
+import httpServer from 'http-server';
+import percySnapshot from '@percy/webdriverio';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 async function createTodo() {
   let newTodo = $('.new-todo');
