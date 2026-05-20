@@ -1,0 +1,86 @@
+# PER-8195 Phase 1 — WebdriverIO matrix-row mapping (STUB).
+# Source of truth for the README table + aggregated docs-site grid.
+# Test code in specs/advanced.test.js — TO BE WRITTEN.
+
+sdk: webdriverio
+package: '@percy/webdriverio'
+language: javascript
+sdk_min_version: '3.3.2'
+cli_min_version: '1.30.3'
+
+rows:
+  - id: widths
+    state: planned
+    test: 'TodoMVC Advanced > exercises widths'
+  - id: percy_css
+    state: planned
+    test: 'TodoMVC Advanced > exercises percyCSS'
+  - id: min_height
+    state: planned
+    test: 'TodoMVC Advanced > exercises minHeight'
+  - id: enable_javascript
+    state: planned
+    test: 'TodoMVC Advanced > exercises enableJavaScript'
+  - id: cli_enable_javascript
+    state: planned
+    test: 'TodoMVC Advanced > exercises cliEnableJavascript'
+  - id: scope
+    state: planned
+    test: 'TodoMVC Advanced > exercises scope'
+  - id: scope_options_scroll
+    state: planned
+    test: 'TodoMVC Advanced > exercises scopeOptions.scroll'
+  - id: dom_transformation
+    state: planned
+    test: 'TodoMVC Advanced > exercises domTransformation'
+  - id: responsive_snapshot_capture
+    state: planned
+    test: 'TodoMVC Advanced > exercises responsiveSnapshotCapture'
+  - id: labels
+    state: planned
+    test: 'TodoMVC Advanced > exercises labels'
+  - id: test_case
+    state: planned
+    test: 'TodoMVC Advanced > exercises testCase'
+  - id: device_pixel_ratio
+    state: planned
+    test: 'TodoMVC Advanced > exercises devicePixelRatio'
+  - id: browsers
+    state: planned
+    test: 'TodoMVC Advanced > exercises browsers override'
+  - id: readiness_preset
+    state: planned
+    test: 'TodoMVC Advanced > exercises readiness preset'
+  - id: disable_shadow_dom
+    state: planned
+  - id: enable_layout
+    state: planned
+  - id: reshuffle_invalid_tags
+    state: planned
+  - id: pseudo_class_enabled_elements
+    state: planned
+  - id: sync
+    state: planned
+
+  # WebdriverIO-specific.
+  - id: regions
+    state: n_a
+    reason: '@percy/webdriverio does not export createRegion; regions are exercised in @percy/selenium-webdriver for the Selenium-WDIO bridge case.'
+  - id: discovery
+    state: n_a
+    reason: 'discovery options apply only to the cli/agent layer, not exposed per-snapshot in WebdriverIO SDK as of 3.3.2.'
+  - id: framework_mode_vs_standalone
+    state: planned
+    test: 'TodoMVC Advanced > exercises both framework-mode (percySnapshot(name)) and standalone-mode (percySnapshot(browser, name)) signatures'
+
+  - id: env_percy_server_address
+    state: planned
+    test: 'CI: advanced job sets PERCY_SERVER_ADDRESS via env'
+  - id: percy_yml_global_config
+    state: planned
+    test: 'global config consumed via .percy.yml'
+  - id: environment_info_reporting
+    state: covered
+    test: 'automatic via @percy/webdriverio client info'
+
+# Pre-existing basic-example coverage (specs/example.test.js): bare `percySnapshot(browser, name)` framework-mode call, no options.
