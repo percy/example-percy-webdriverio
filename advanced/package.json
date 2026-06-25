@@ -1,0 +1,21 @@
+{
+  "name": "example-percy-webdriverio-advanced",
+  "private": true,
+  "type": "module",
+  "description": "Advanced Percy + WebdriverIO example. Exercises the full applicable SDK feature surface. See README.md for the matrix-row coverage.",
+  "scripts": {
+    "test:advanced": "percy exec -- wdio run ./wdio.conf.js",
+    "test:advanced:ci": "PERCY_TOKEN=fake_token percy exec --testing -- wdio run ./wdio.conf.js"
+  },
+  "devDependencies": {
+    "@percy/cli": "^1.31.13",
+    "@percy/webdriverio": "^3.3.2",
+    "@wdio/cli": "^9.20.0",
+    "@wdio/local-runner": "^9.20.0",
+    "@wdio/mocha-framework": "^9.20.0",
+    "@wdio/spec-reporter": "^9.20.0",
+    "http-server": "^14.1.0",
+    "todomvc-app-css": "^2.4.2",
+    "webdriverio": "^9.20.0"
+  }
+}
